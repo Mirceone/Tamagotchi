@@ -6,12 +6,12 @@
 class Tamagotchi : public Tier {
 public:
     Tamagotchi(const std::string& name);
-
-    void waitAction();
-    void feed();
-    void play();
-    void sleep();
-    void medicate();
+        // Implementations of pure virtual functions
+    void warten() override;
+    void fuettern() override;
+    void spielen() override;
+    void schlafen() override;
+    void medikamentGeben();
 };
 
 #endif

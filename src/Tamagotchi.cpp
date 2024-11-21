@@ -1,7 +1,7 @@
 #include "tamagotchi.hpp"
 #include <cstdlib> // For rand()
 
-Tamagotchi::Tamagotchi(const std::string& name) : Tier(name) {
+Tamagotchi::Tamagotchi(const std::string& name) {
     hunger = 1;
     gesundheit = 3;
     langeweile = 0;
@@ -10,7 +10,7 @@ Tamagotchi::Tamagotchi(const std::string& name) : Tier(name) {
     logbuch.push_back("Tamagotchi created.");
 }
 
-void Tamagotchi::waitAction() {
+void Tamagotchi::warten() {
     // Increment age and hunger
     alter += 1;
     hunger += 1;
@@ -24,18 +24,18 @@ void Tamagotchi::waitAction() {
     }
 
     // Log the action
-    logbuch.push_back("Wait action performed.");
+    logbuch.push_back("Warten Aktion durchgeführt.");
 }
 
-void Tamagotchi::feed() {
+void Tamagotchi::fuettern() {
     // Reset hunger to 1
     hunger = 1;
 
     // Log the action
-    logbuch.push_back("Tamagotchi fed.");
+    logbuch.push_back("Tamagotchi gefüttert.");
 }
 
-void Tamagotchi::play() {
+void Tamagotchi::spielen() {
     // Reset boredom to 1
     langeweile = 1;
 
@@ -43,17 +43,17 @@ void Tamagotchi::play() {
     hunger += 1;
 
     // Log the action
-    logbuch.push_back("Tamagotchi played with.");
+    logbuch.push_back("Mit Tamagotchi gespielt.");
 }
 
-void Tamagotchi::medicate() {
+void Tamagotchi::medikamentGeben() {
     if (gesundheit == 1) {
         // Set health to 3 (side effects!)
         gesundheit = 3;
-        logbuch.push_back("Tamagotchi given medicine: health restored, side effects!");
+        logbuch.push_back("Tamagotchi Medizin gegeben: Gesundheit wiederhergestellt, Nebenwirkungen!");
     } else {
         // Decrease health by 2, minimum value 1
         gesundheit = std::max(1, gesundheit - 2);
-        logbuch.push_back("Tamagotchi given unnecessary medicine: health reduced.");
+        logbuch.push_back("Tamagotchi unnötige Medizin gegeben: Gesundheit reduziert.");
     }
 }

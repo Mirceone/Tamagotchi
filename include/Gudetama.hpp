@@ -6,11 +6,11 @@
 class Gudetama : public Tier {
 public:
     Gudetama(const std::string& name);
-
-    void waitAction();
-    void feed();
-    void play();
-    void sleep();
+        // Implementations of pure virtual functions
+    void warten() override;
+    void fuettern() override;
+    void spielen() override;
+    void schlafen() override;
 };
 
 #endif

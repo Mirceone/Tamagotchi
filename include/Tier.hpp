@@ -13,20 +13,21 @@ protected:
     
 
 public:
-    Tier(const std::string& name);
-    virtual ~Tier() {}
+    // Virtual destructor for proper cleanup of derived classes
+    virtual ~Tier() = default;
 
-    // Pure virtual methods for pet actions
-    virtual void feed() = 0;
-    virtual void play() = 0;
-    virtual void sleep() = 0;
+    // Pure virtual functions (must be implemented in derived classes)
+    virtual void warten() = 0;
+    virtual void fuettern() = 0;
+    virtual void spielen() = 0;
+    virtual void schlafen() = 0;
 
     // Getter methods
-    std::string getName() const { return name; }
-    int getAlter() const { return alter; }
-    int getGesundheit() const { return gesundheit; }
-    int getLangweiligkeit() const { return langeweile; }
-    int getHunger() const { return hunger; }
+    std::string get_name() const { return name; }
+    int get_alter() const { return alter; }
+    int get_gesundheit() const { return gesundheit; }
+    int get_langweile() const { return langeweile; }
+    int get_hunger() const { return hunger; }
 
     // Getter for log
     
