@@ -1,5 +1,4 @@
 #include "tamagotchi.hpp"
-#include <algorithm>
 #include <cstdlib> // For rand()
 
 Tamagotchi::Tamagotchi(const std::string& name) : Tier(name) {

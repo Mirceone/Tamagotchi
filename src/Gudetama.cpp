@@ -8,13 +8,17 @@ Gudetama::Gudetama(const std::string& name) : Tier(name) {
 }
 
 void Gudetama::feed() {
-    hunger = std::min(100, hunger + 15);   
+    // Set hunger to 1 as per specification
+    hunger = 1;
 }
 
 void Gudetama::play() {
-    langeweile = std::max(0, langeweile - 10);
+    // Improve boredom by 1 point
+    langeweile = std::max(0, langeweile - 1);
 }
-
-void Gudetama::sleep() {
-    gesundheit = std::min(100, gesundheit + 5);
+void Gudetama::waitAction() {
+    alter += 1;
+    hunger += 1;
+    langeweile += (std::rand() % 2); // Increment by 0 or 1 randomly
+    logbuch.push_back("Wait action performed.");
 }
