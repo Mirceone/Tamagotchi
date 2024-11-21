@@ -1,2 +1,2 @@
-include -> header file folder\n
+include -> header file folder
 src -> source file folder
