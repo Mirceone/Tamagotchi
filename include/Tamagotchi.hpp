@@ -7,9 +7,11 @@ class Tamagotchi : public Tier {
 public:
     Tamagotchi(const std::string& name);
 
-    void feed() override;
-    void play() override;
-    void sleep() override;
+    void waitAction();
+    void feed();
+    void play();
+    void sleep();
+    void medicate();
 };
 
 #endif

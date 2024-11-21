@@ -2,9 +2,8 @@
 #include <algorithm>
 
 Gudetama::Gudetama(const std::string& name) : Tier(name) {
-    hunger = 100;
-    gesundheit = 100;  // Gudetama might start with a different health level
-    langweiligkeit = 10;
+    hunger = 1;
+    langeweile = 0;
     alter = 0;
 }
 
@@ -13,7 +12,7 @@ void Gudetama::feed() {
 }
 
 void Gudetama::play() {
-    langweiligkeit = std::max(0, langweiligkeit - 10);
+    langeweile = std::max(0, langeweile - 10);
 }
 
 void Gudetama::sleep() {

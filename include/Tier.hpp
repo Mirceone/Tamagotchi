@@ -8,7 +8,7 @@ protected:
     std::string name;
     int alter;
     int gesundheit;
-    int langweiligkeit;
+    int langeweile;
     int hunger;
     
 
@@ -25,7 +25,7 @@ public:
     std::string getName() const { return name; }
     int getAlter() const { return alter; }
     int getGesundheit() const { return gesundheit; }
-    int getLangweiligkeit() const { return langweiligkeit; }
+    int getLangweiligkeit() const { return langeweile; }
     int getHunger() const { return hunger; }
 
     // Getter for log

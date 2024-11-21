@@ -7,9 +7,10 @@ class Gudetama : public Tier {
 public:
     Gudetama(const std::string& name);
 
-    void feed() override;
-    void play() override;
-    void sleep() override;
+    void waitAction();
+    void feed();
+    void play();
+    void sleep();
 };
 
 #endif
