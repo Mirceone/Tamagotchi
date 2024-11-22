@@ -60,13 +60,13 @@ public:
 
                 break;
             case 's':
-                tier->schlafen();
+                tier->spielen();
                 break;
             case 'f':
                 tier->fuettern();
                 break;
             case 'l':
-                tier.logbuch();
+                tier->logbuch();
                 break;
             default:
                 cout << "Invalid command " << endl;
