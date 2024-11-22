@@ -69,7 +69,7 @@ public:
                 tier.logbuch();
                 break;
             default:
-                cout<< "Invalid command " << endl;
+                cout << "Invalid command " << endl;
             }
         }
         cout << "Das spiel hat beendet.";

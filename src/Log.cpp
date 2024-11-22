@@ -9,9 +9,10 @@ private:
     vector<string> logbuch;
 
 public:
-    void add_log(const string& log)
+    void add_log(const string &log)
     {
         logbuch.push_back(log);
+        cout << log << endl;
     }
     void get_logbuch()
     {
