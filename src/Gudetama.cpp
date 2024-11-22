@@ -1,13 +1,9 @@
-#include "gudetama.hpp"
-#include "tier.hpp"
+#include "../include/Gudetama.hpp"
+#include "../include/Tier.hpp"
 #include <algorithm>
 
 
-Gudetama::Gudetama(const std::string& name) : Tier(name) {
-    hunger = 1;
-    langeweile = 0;
-    alter = 0;
-}
+Gudetama::Gudetama(const std::string& name) : Tier(name) {}
 
 void Gudetama::fuettern() {
     // Set hunger to 1 as per specification

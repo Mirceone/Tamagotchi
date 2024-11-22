@@ -1,12 +1,13 @@
 #include "Tier.hpp"
 
-#ifndef run_main_game_hpp
-#define run_main_game_hpp
+#ifndef RunMainGame_hpp
+#define RunMainGame_hpp
 
-class RunMainGame
-{
+class RunMainGame {
 private:
     Tier* tier;
+    Log log;
+
     void select_creature();
     bool is_tamagotchi();
 

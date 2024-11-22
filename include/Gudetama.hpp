@@ -1,11 +1,13 @@
 #ifndef gudetama_hpp
 #define gudetama_hpp
 
-#include "tier.hpp"
+#include "Tier.hpp"
+#include "Log.hpp"
+
 
 class Gudetama : public Tier {
 protected:
-    RunMainGame log;
+    Log log;
 public:
     Gudetama(const std::string& name);
         // Implementations of pure virtual functions

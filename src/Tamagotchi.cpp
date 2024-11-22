@@ -1,10 +1,12 @@
-#include "tamagotchi.hpp"
-#include "Log.hpp"
+#include "../include/Tamagotchi.hpp"
+#include "../include/Log.hpp"
 #include <cstdlib> // For rand()
+#include <iostream>
 
 Tamagotchi::Tamagotchi(const std::string& name) : Tier(name), gesundheit(3) {}  // Initialize using base and derived attributes
 
 void Tamagotchi::warten() {
+    // std::cout << "Tamagotchi::warten called." << std::endl; // debugging
     // Increment age and hunger
     alter += 1;
     hunger += 1;
@@ -12,9 +14,9 @@ void Tamagotchi::warten() {
     // Random boredom increment
     langeweile += (std::rand() % 2); // Increment by 0 or 1 randomly
 
-    // If hunger > 3, random health increment
-    if (hunger > 3) {
-        gesundheit = std::min(3, gesundheit + (std::rand() % 2)); // Increment by 0 or 1
+    // If hunger > 3, random health decrement
+    if (hunger > 3 && gesundheit > 1) {
+        gesundheit = std::min(3, gesundheit - (std::rand() % 2)); // Decrement by 0 or 1
     }
 
     // Log the action

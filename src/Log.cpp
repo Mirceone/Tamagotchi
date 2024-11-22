@@ -1,24 +1,15 @@
 #include <vector>
 #include <string>
 #include <iostream>
-using namespace std;
+#include "../include/Log.hpp"
 
-class Log
-{
-private:
-    vector<string> logbuch;
+void Log::add_log(const std::string& log) {
+    logbuch.push_back(log);
+}
 
-public:
-    void add_log(const string &log)
-    {
-        logbuch.push_back(log);
-        cout << log << endl;
+// Print all log entries
+void Log::get_logbuch() const {
+    for (const auto& entry : logbuch) {
+        std::cout << entry << std::endl;
     }
-    void get_logbuch()
-    {
-        for (const string &log : logbuch)
-        {
-            cout << log << endl;
-        }
-    }
-};
+}
