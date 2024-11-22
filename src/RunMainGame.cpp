@@ -33,18 +33,6 @@ private:
         }
     }
 
-    bool is_tamagotchi(Tier *tier)
-    {
-        if (dynamic_cast<Tamagotchi *>(tier))
-        {
-            return true;
-        }
-        else if (dynamic_cast<Gudetama *>(tier))
-        {
-            return false;
-        }
-    }
-
 public:
     void run()
     {
@@ -57,25 +45,33 @@ public:
             switch (command)
             {
             case 'w':
-                // to be done
+                tier->warten();
                 break;
             case 'm':
-                if (is_tamagotchi)
+                Tamagotchi *tamagotchi = dynamic_cast<Tamagotchi *>(tier);
+                if (tamagotchi)
                 {
-                    // to be done
+                    tamagotchi->medikamentGeben();
                 }
+                else
+                {
+                    cout << "Invalid command for Gudetama" << endl;
+                }
+
                 break;
             case 's':
-                // to be done
+                tier->schlafen();
                 break;
             case 'f':
-                // to be done
+                tier->fuettern();
                 break;
             case 'l':
-                // to be done
+                tier.logbuch();
                 break;
             default:
+                cout<< "Invalid command " << endl;
             }
         }
+        cout << "Das spiel hat beendet.";
     }
 };
