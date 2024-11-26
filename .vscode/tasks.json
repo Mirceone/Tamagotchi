@@ -6,11 +6,16 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g",
-                "main.cpp",
+                "-std=c++17", // Ensure C++17 standard is used
+                "-I../include", // Include the headers from the '../include' directory
+                "-v",
+                "*.cpp", // Compile all .cpp files in the src directory
                 "-o",
-                "main"
+                "main" // Output executable is named 'main'
             ],
+            "options": {
+                "cwd": "${workspaceFolder}/src" // Set current working directory to 'src'
+            },
             "group": "build",
             "problemMatcher": [
                 "$gcc"
@@ -24,7 +29,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "*.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
