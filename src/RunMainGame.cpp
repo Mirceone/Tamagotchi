@@ -71,6 +71,9 @@ void RunMainGame::run() {
                     tamagotchi->medikamentGeben();
                 } else {
                     cout << "Ungültiger Befehl für Gudetama" << endl;
+                    cout << "Drücke Enter, um fortzufahren..." << endl;
+                    cin.ignore();
+                    cin.get();
                 }
                 break;
             }
