@@ -5,12 +5,13 @@
         "name": "Debug (g++)",
         "type": "cppdbg",
         "request": "launch",
-        "program": "${workspaceFolder}/main",  // Path to the executable
+        "program": "${workspaceFolder}/src/main",
+
         "args": [],
         "stopAtEntry": false,
         "cwd": "${workspaceFolder}",
         "environment": [],
-        "externalConsole": true,  // Open external console for input/output
+        "externalConsole": false,  // Open external console for input/output
         "MIMode": "gdb",          // Use GDB for debugging
         "setupCommands": [
           {
