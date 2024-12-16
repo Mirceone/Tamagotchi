@@ -3,6 +3,7 @@
 
 #include "Tier.hpp"
 #include "Log.hpp"
+
 class Tamagotchi : public Tier {
 protected:
     int gesundheit;
