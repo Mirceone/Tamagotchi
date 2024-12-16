@@ -9,13 +9,13 @@ Tamagotchi::Tamagotchi(const std::string& name) : Tier(name), gesundheit(3) {}  
 
 void Tamagotchi::warten() {
     // std::cout << "Tamagotchi::warten called." << std::endl; // debugging
-    // Increment age and hunger
-    alter += 1;
-    hunger += 1;
+    // Increment age and hunger, capped at 5
+    alter = std::min(5, alter + 1);
+    hunger = std::min(5, hunger + 1);
 
-    // Random boredom increment
-    langeweile += (std::rand() % 2); // Increment by 0 or 1 randomly
-
+    // Random boredom increment(1 or 0), capped at 5
+    langeweile = std::min(5, langeweile + (std::rand() % 2));
+    
     // If hunger > 3, random health decrement
     if (hunger > 3 && gesundheit > 1) {
         gesundheit = std::min(3, gesundheit - (std::rand() % 2)); // Decrement by 0 or 1
@@ -41,10 +41,10 @@ void Tamagotchi::playMiniGame() {
 
     if (choice == 1) {
         Game1 game1;
-        game1.Game(this->get_name());
+        game1.playGame(this->get_name());
     } else {
         Game2 game2;
-        game2.Game(this->get_name());
+        game2.playGame(this->get_name());
     }
 }
 
@@ -52,8 +52,8 @@ void Tamagotchi::spielen() {
     // Reset boredom to 1
     langeweile = 1;
 
-    // Increase hunger
-    hunger += 1;
+    // Increase hunger, cap at 5
+    hunger = std::min(5, hunger + 1);
 
     // Log the action
     log.add_log("Mit Tamagotchi gespielt.");

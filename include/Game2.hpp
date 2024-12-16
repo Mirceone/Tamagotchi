@@ -1,9 +1,9 @@
-#ifndef GAME_HPP
-#define GAME_HPP
+#ifndef GAME2_HPP
+#define GAME2_HPP
 
 #include <string>
 
-class Game {
+class Game2 {
 private:
     std::string player;
     std::string opponent;
@@ -16,4 +16,4 @@ public:
     
 };
 
-#endif // GAME_HPP
+#endif // GAME2_HPP

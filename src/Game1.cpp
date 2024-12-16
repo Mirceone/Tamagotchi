@@ -1,4 +1,4 @@
-#include "../include/Game.hpp"
+#include "../include/Game1.hpp"
 #include <iostream> 
 #include <string>
 #include <cstdlib> 
@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void Game::playGame(const string& opponentName) {
+void Game1::playGame(const string& opponentName) {
     cout << "In this fun twist on the classic game, you play Rock, Paper, Scissors against " << opponentName << ".";
     cout << "Here is how it works:" <<endl;
     cout << "Make your choice: write rock, paper or scissors; " << endl;

@@ -1,4 +1,4 @@
-#include "../include/Game.hpp"
+#include "../include/Game2.hpp"
 #include <iostream>
 #include <string>
 #include <cstdlib>
@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void Game::playGame(const std::string& opponentName){
+void Game2::playGame(const std::string& opponentName){
     cout << "In this game " << opponentName << " will hide in the left or the right side of the screen." << endl;
     cout << "Make your choice: write 'L' if you think that they're on the left side or 'R' for the right side." << endl;
     cout << "The winner will be decided after five rounds." << endl;

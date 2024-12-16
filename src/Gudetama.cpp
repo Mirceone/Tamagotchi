@@ -14,7 +14,6 @@ void Gudetama::fuettern() {
     log.add_log("Gudetama gefüttert.");
 }
 
-// In Gudetama.cpp
 void Gudetama::playMiniGame() {
     std::cout << "Choose a game (1 or 2): ";
     int choice;
@@ -22,34 +21,24 @@ void Gudetama::playMiniGame() {
 
     if (choice == 1) {
         Game1 game1;
-        game1.Game(this->get_name());
+        game1.playGame(this->get_name());
     } else {
         Game2 game2;
-        game2.Game(this->get_name());
+        game2.playGame(this->get_name());
     }
 }
 
 void Gudetama::spielen() {
     // Improve boredom by 1 point
     langeweile = std::max(0, langeweile - 1);
-    std::cout << "Choose a game 1 or 2";
-    int choice;
-    std::cin >> choice;
-    if(choice == 1){
-        Game1 game1;
-        game1.Game(this->get_name());
-    } else {
-        Game2 game2;
-        game2.Game(this->get_name());
-    }
     log.add_log("Mit Gudetama gespielt.");
 
 }
 
 void Gudetama::warten() {
     alter += 1;
-    hunger += 1;
-    langeweile += (std::rand() % 2); // Increment by 0 or 1 randomly
+    hunger = std::min(5, hunger + 1);;
+    langeweile = std::min(5, langeweile + (std::rand() % 2));
     log.add_log("Wait action performed.");
 }
 
