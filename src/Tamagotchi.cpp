@@ -33,7 +33,6 @@ void Tamagotchi::fuettern() {
     log.add_log("Tamagotchi gefüttert.");
 }
 
-// In Gudetama.cpp
 void Tamagotchi::playMiniGame() {
     std::cout << "Choose a game (1 or 2): ";
     int choice;
@@ -42,9 +41,13 @@ void Tamagotchi::playMiniGame() {
     if (choice == 1) {
         Game1 game1;
         game1.playGame(this->get_name());
-    } else {
+    } else if (choice == 2) {
         Game2 game2;
         game2.playGame(this->get_name());
+    } else {
+        std::cout << "Invalid choice. Exiting mini-game.\n";
+        log.add_log("Invalid game choice, exited mini-game.");
+        return;
     }
 }
 

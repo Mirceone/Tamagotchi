@@ -31,9 +31,6 @@ void RunMainGame::run() {
 
     char command;
     do {
-        // Clear the terminal
-        //clear_screen();
-
         // Display animal's current attributes
         cout << "\n=============================" << endl;
         cout << "Tier: " << tier->get_name() << endl;
@@ -64,6 +61,7 @@ void RunMainGame::run() {
         switch (command) {
             case 'w':
                 tier->warten();
+                pause_and_clear();
                 break;
             case 'm': {
                 Tamagotchi* tamagotchi = dynamic_cast<Tamagotchi*>(tier);
@@ -71,29 +69,33 @@ void RunMainGame::run() {
                     tamagotchi->medikamentGeben();
                 } else {
                     cout << "Ungültiger Befehl für Gudetama" << endl;
-                    cout << "Drücke Enter, um fortzufahren..." << endl;
-                    cin.ignore();
-                    cin.get();
                 }
+                pause_and_clear();
                 break;
             }
             case 's':
                 tier->playMiniGame();
-                tier->spielen();
+                if (!std::cin) {  // Handle invalid input clearing
+                    std::cin.clear();  // Clear error flag
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Skip bad input
+                } else {
+                    tier->spielen();
+                }
+                pause_and_clear();
                 break;
             case 'f':
                 tier->fuettern();
+                pause_and_clear();
                 break;
             case 'l':
                 cout << "\nLogbuch: " << endl;
                 tier->logbuch();
-                cout << "Drücke Enter, um fortzufahren..." << endl;
-                cin.ignore();
-                cin.get(); // Pause only for viewing the logbook
+                pause_and_clear();
                 break;
             default:
                 if (command != 'b') {
                     cout << "Ungültiger Befehl. Bitte versuche es erneut." << endl;
+                    pause_and_clear();
                 }
         }
 
