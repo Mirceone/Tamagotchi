@@ -32,7 +32,7 @@ void RunMainGame::run() {
     char command;
     do {
         // Clear the terminal
-        clear_screen();
+        //clear_screen();
 
         // Display animal's current attributes
         cout << "\n=============================" << endl;
@@ -78,6 +78,7 @@ void RunMainGame::run() {
                 break;
             }
             case 's':
+                tier->playMiniGame();
                 tier->spielen();
                 break;
             case 'f':

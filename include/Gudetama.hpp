@@ -10,11 +10,11 @@ protected:
     Log log;
 public:
     Gudetama(const std::string& name);
-        // Implementations of pure virtual functions
     void warten() override;
     void fuettern() override;
     void spielen() override;
     void logbuch() override;
+    void playMiniGame() override;
 };
 
 #endif

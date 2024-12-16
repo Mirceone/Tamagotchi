@@ -1,5 +1,7 @@
 #include "../include/Tamagotchi.hpp"
 #include "../include/Log.hpp"
+#include "../include/Game1.hpp"
+#include "../include/Game2.hpp"
 #include <cstdlib> // For rand()
 #include <iostream>
 
@@ -29,6 +31,21 @@ void Tamagotchi::fuettern() {
 
     // Log the action
     log.add_log("Tamagotchi gefüttert.");
+}
+
+// In Gudetama.cpp
+void Tamagotchi::playMiniGame() {
+    std::cout << "Choose a game (1 or 2): ";
+    int choice;
+    std::cin >> choice;
+
+    if (choice == 1) {
+        Game1 game1;
+        game1.Game(this->get_name());
+    } else {
+        Game2 game2;
+        game2.Game(this->get_name());
+    }
 }
 
 void Tamagotchi::spielen() {

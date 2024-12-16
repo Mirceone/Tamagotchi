@@ -17,6 +17,7 @@ public:
     void spielen() override;
     void medikamentGeben();
     void logbuch() override;
+    void playMiniGame() override;
 
     // Getter method for gesundheit
     int get_gesundheit() const { return gesundheit; }
