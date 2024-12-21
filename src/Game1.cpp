@@ -2,61 +2,56 @@
 #include <iostream> 
 #include <string>
 #include <cstdlib> 
-#include <ctime> 
+#include <time.h> 
 
 using namespace std;
-
 void Game1::playGame(const string& opponentName) {
-    cout << "In this fun twist on the classic game, you play Rock, Paper, Scissors against " << opponentName << ".";
-    cout << "Here is how it works:" <<endl;
-    cout << "Make your choice: write rock, paper or scissors; " << endl;
-    cout << opponentName << " will make it's choice." << endl;
-    cout << "The winner will be decided after five rounds where: " << endl;
-    cout << "Rock beats scissors; " << endl;
-    cout << "Scissors beats paper; " << endl;
-    cout << "Paper beats rock; " << endl;
-    cout << "If both you and " << opponentName << "choose the same option, it's a tie." << endl;
-    cout << "The goal is to have fun and bond with your digital companion. Can you outsmart " << opponentName << "?" << endl;
+    cout << "In diesem lustigen Twist des klassischen Spiels spielst du Schere, Stein, Papier gegen " << opponentName << ".";
+    cout << "So funktioniert es:" << endl;
+    cout << "Triff deine Wahl: schreibe Schere, Stein oder Papier; " << endl;
+    cout << opponentName << " wird seine Wahl treffen." << endl;
+    cout << "Der Gewinner wird nach fünf Runden entschieden, wobei: " << endl;
+    cout << "Stein schlägt Schere; " << endl;
+    cout << "Schere schlägt Papier; " << endl;
+    cout << "Papier schlägt Stein; " << endl;
+    cout << "Wenn sowohl du als auch " << opponentName << " die gleiche Option wählen, ist es ein Unentschieden." << endl;
+    cout << "Das Ziel ist es, Spaß zu haben und mit deinem digitalen Begleiter zu spielen. Kannst du " << opponentName << " überlisten?" << endl;
     
     playerScore = 0;
     opponentScore = 0;
-    string rps[] = {"rock", "paper", "scissors"};
-    cout << "Type 'START' to start the game!" << endl;
+    string rps[] = {"Schere", "Stein", "Papier"};
+    cout << "Gib 'START' ein, um das Spiel zu starten!" << endl;
     cin >> button;
 
-    srand((unsigned int)time(NULL)); 
+    srand(time(0)); 
     if (button == "START"){
     while (true){
-        cout << "Enter rock, paper or scissors: ";
-        getline(cin, player);
-        if(player != "rock" && player != "paper" && player != "scissors"){ 
+        cout << "Gib Schere, Stein oder Papier ein: ";
+        cin >> player;
+        if(player != "Schere" && player != "Stein" && player != "Papier"){ 
         break;
         }
         opponent = rps[rand() % 3]; 
-        cout << opponentName << " chooses " << opponent <<endl;
-        if (player == opponent){ 
-            playerScore++;
-            opponentScore++;
-        } else if (player == "rock"){
-             if (opponent == "scissors") playerScore++;
-             else opponentScore++;
-            } else if (player == "paper"){
-                 if (opponent == "rock") playerScore++;
-                else opponentScore++;
-            } else if (player == "scissors"){
-                  if (opponent == "paper") playerScore++;
-                 else opponentScore++;
-                }
-        if( playerScore == 5 || opponentScore == 5) break;
-        cout << "Player: " << playerScore << " " << opponentName << ": " << opponentScore << endl;
+        cout << opponentName << " wählt " << opponent << endl;
+        if (player == opponent) { 
+            cout << "Diese Runde ist ein Unentschieden!" << endl;
+        } else if (player == "Stein") {
+            if (opponent == "Schere") playerScore++;
+            else opponentScore++;
+        } else if (player == "Papier") {
+            if (opponent == "Stein") playerScore++;
+            else opponentScore++;
+        } else if (player == "Schere") {
+            if (opponent == "Papier") playerScore++;
+            else opponentScore++;
+        }
+        if (playerScore == 5 || opponentScore == 5) break;
+        cout << "Spieler: " << playerScore << " " << opponentName << ": " << opponentScore << endl;
     }
     }
 
- cout << "Player: " << playerScore<< " " << opponentName << ": " << opponentScore << endl;
- if (playerScore > opponentScore) cout<< " Player wins!";
- else if (playerScore < opponentScore) cout << opponentName <<  " wins!";
- else cout << "Tie!";
-
+    cout << "Spieler: " << playerScore << " " << opponentName << ": " << opponentScore << endl;
+    if (playerScore > opponentScore) cout << " Spieler gewinnt!";
+    else if (playerScore < opponentScore) cout << opponentName << " gewinnt!";
+    else cout << "Unentschieden!";
 }
-
-

@@ -5,53 +5,52 @@
 #include <time.h>
 
 using namespace std;
-
 void Game2::playGame(const std::string& opponentName){
-    cout << "In this game " << opponentName << " will hide in the left or the right side of the screen." << endl;
-    cout << "Make your choice: write 'L' if you think that they're on the left side or 'R' for the right side." << endl;
-    cout << "The winner will be decided after five rounds." << endl;
+    cout << "In diesem Spiel wird sich " << opponentName << " auf der linken oder rechten Seite des Bildschirms verstecken." << endl;
+    cout << "Triff deine Wahl: schreibe 'L', wenn du denkst, dass sie auf der linken Seite sind, oder 'R' für die rechte Seite." << endl;
+    cout << "Der Gewinner wird nach fünf Runden entschieden." << endl;
 
     playerScore = 0;
     opponentScore = 0;
 
-    cout << "Type 'START' to start the game!" << endl;
+    cout << "Gib 'START' ein, um das Spiel zu starten!" << endl;
     cin >> button;
 
     if (button != "START") {
-        cout << "Game not started!" << endl;
+        cout << "Spiel nicht gestartet!" << endl;
         return;
     }
 
     srand(time(0));
 
     while (true) { 
-        cout << "Enter L or R: ";
+        cout << "Gib L oder R ein: ";
         cin >> player;
 
         if (player != "L" && player != "R") {
-            cout << "Invalid input. Please enter 'L' or 'R'." << endl;
+            cout << "Ungültige Eingabe. Bitte gib 'L' oder 'R' ein." << endl;
             continue;
         }
 
         opponent = (rand() % 2 == 0) ? "L" : "R";
 
-        cout << opponentName << " is in the " 
-             << (opponent == "L" ? "left" : "right") << " side." << endl;
+        cout << opponentName << " ist auf der " 
+             << (opponent == "L" ? "linken" : "rechten") << " Seite." << endl;
 
         if (player == opponent) playerScore++;
         else opponentScore++;
 
-        cout << "Current score:" << endl;
-        cout << "Player: " << playerScore << " | " << opponentName << ": " << opponentScore << endl;
+        cout << "Aktueller Punktestand:" << endl;
+        cout << "Spieler: " << playerScore << " | " << opponentName << ": " << opponentScore << endl;
         cout << endl;
 
         if (playerScore == 5 || opponentScore == 5) break;
     }
 
     cout << endl;
-    if (playerScore > opponentScore) cout << "Player wins!" << endl;
-    else cout << opponentName << " wins!" << endl;
+    if (playerScore > opponentScore) cout << "Spieler gewinnt!" << endl;
+    else cout << opponentName << " gewinnt!" << endl;
 
-    cout << "Final score:" << endl;
-    cout << "Player: " << playerScore << " | " << opponentName << ": " << opponentScore << endl;
+    cout << "Endstand:" << endl;
+    cout << "Spieler: " << playerScore << " | " << opponentName << ": " << opponentScore << endl;
 }
