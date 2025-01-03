@@ -22,7 +22,7 @@ public:
     virtual void warten() = 0;
     virtual void fuettern() = 0;
     virtual void spielen() = 0;
-    virtual void playMiniGame() = 0;  // Abstract method for games
+    virtual void displayMiniGameMenu() = 0;  // Abstract method for games
 
     // Getter methods
     std::string get_name() const { return name; }

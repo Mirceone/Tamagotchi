@@ -14,8 +14,8 @@ void Gudetama::fuettern() {
     log.add_log("Gudetama gefüttert.");
 }
 
-void Gudetama::playMiniGame() {
-    std::cout << "Choose a game (1 or 2): ";
+void Gudetama::displayMiniGameMenu() {
+    std::cout << "Choose a game:" << std::endl << "1. Rock, Paper, Scissors" << std::endl << "2. Left or Right: \n";
     int choice;
     std::cin >> choice;
 

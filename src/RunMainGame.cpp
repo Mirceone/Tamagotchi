@@ -74,7 +74,7 @@ void RunMainGame::run() {
                 break;
             }
             case 's':
-                tier->playMiniGame();
+                tier->displayMiniGameMenu();
                 if (!std::cin) {  // Handle invalid input clearing
                     std::cin.clear();  // Clear error flag
                     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Skip bad input

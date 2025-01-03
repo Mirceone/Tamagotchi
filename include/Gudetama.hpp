@@ -14,7 +14,7 @@ public:
     void fuettern() override;
     void spielen() override;
     void logbuch() override;
-    void playMiniGame() override;
+    void displayMiniGameMenu() override;
 };
 
 #endif

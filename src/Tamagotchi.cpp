@@ -33,8 +33,8 @@ void Tamagotchi::fuettern() {
     log.add_log("Tamagotchi gefüttert.");
 }
 
-void Tamagotchi::playMiniGame() {
-    std::cout << "Choose a game (1 or 2): ";
+void Tamagotchi::displayMiniGameMenu() {
+    std::cout << "Choose a game:" << std::endl << "1. Rock, Paper, Scissors" << std::endl << "2. Left or Right: \n";
     int choice;
     std::cin >> choice;
 
