@@ -7,7 +7,7 @@
 // Check for Windows or Linux/macOS at compilation
 inline void clear_screen() {
 #ifdef _WIN32
-    std::system("clear"); // Windows
+    std::system("cls"); // Windows
 #else
     std::system("clear"); // Linux/macOS
 #endif
