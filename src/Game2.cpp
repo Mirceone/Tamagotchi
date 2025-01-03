@@ -21,8 +21,6 @@ void Game2::playGame(const std::string& opponentName){
         return;
     }
 
-    srand(time(0));
-
     while (true) { 
         cout << "Gib L oder R ein: ";
         cin >> player;

@@ -23,7 +23,6 @@ void Game1::playGame(const string& opponentName) {
     cout << "Gib 'START' ein, um das Spiel zu starten!" << endl;
     cin >> button;
 
-    srand(time(0)); 
     if (button == "START"){
     while (true){
         cout << "Gib Schere, Stein oder Papier ein: ";

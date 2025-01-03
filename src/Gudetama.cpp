@@ -15,21 +15,17 @@ void Gudetama::fuettern() {
 }
 
 void Gudetama::displayMiniGameMenu() {
-    std::cout << "Waehl ein Spiel:" << std::endl << "1. Rock, Paper, Scissors" << std::endl << "2. Links oder Rechts: \n";
-    int choice;
-    std::cin >> choice;
-
-    if (choice == 1) {
+    int randomChoice = (std::rand() % 100) < 75 ? 2 : 1; // 75% chance for Game2, 25% for Game1
+        
+    if (randomChoice == 1) {
         Game1 game1;
         game1.playGame(this->get_name());
-    } else if (choice == 2) {
+    } else {
         Game2 game2;
         game2.playGame(this->get_name());
-    } else {
-        std::cout << "Ungueltige Wahl. Mini-Spiel wird beendet.\n";
-        log.add_log("Ungueltige Spielwahl, Mini-Spiel beendet.");
-        return;
     }
+    
+    log.add_log("Gudetama hat ein Spiel zufaellig gewaehlt.");
 }
 
 void Gudetama::spielen() {

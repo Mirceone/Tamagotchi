@@ -10,21 +10,22 @@ protected:
     int alter;
     int langeweile;
     int hunger;
+    std::string type;
 
 public:
     // Constructor for shared attributes
     Tier(const std::string& name)
-        : name(name), alter(0), langeweile(0), hunger(1) {}
+        : name(name), alter(1), hunger(1), langeweile(3) {}
     // Virtual destructor for proper cleanup of derived classes
     virtual ~Tier() = default;
 
-    // Pure virtual functions (must be implemented in derived classes)
+    // Pure virtual functions
     virtual void warten() = 0;
     virtual void fuettern() = 0;
     virtual void spielen() = 0;
-    virtual void displayMiniGameMenu() = 0;  // Abstract method for games
+    virtual void displayMiniGameMenu() = 0;
 
-    // Getter methods
+    // Getters
     std::string get_name() const { return name; }
     int get_alter() const { return alter; }
     int get_langweile() const { return langeweile; }

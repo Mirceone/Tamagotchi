@@ -7,6 +7,7 @@
 class Tamagotchi : public Tier {
 protected:
     int gesundheit;
+    std::string type;
     Log log;
 public:
     // Constructor explicitly calls the base constructor

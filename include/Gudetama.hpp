@@ -7,6 +7,7 @@
 
 class Gudetama : public Tier {
 protected:
+    std::string type;
     Log log;
 public:
     Gudetama(const std::string& name);
