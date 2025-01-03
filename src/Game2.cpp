@@ -28,7 +28,7 @@ void Game2::playGame(const std::string& opponentName){
         cin >> player;
 
         if (player != "L" && player != "R") {
-            cout << "Ungültige Eingabe. Bitte gib 'L' oder 'R' ein." << endl;
+            cout << "Ungueltige Eingabe. Bitte gib 'L' oder 'R' ein." << endl;
             continue;
         }
 

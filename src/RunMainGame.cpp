@@ -47,7 +47,7 @@ void RunMainGame::run() {
         // Display available commands
         cout << "Befehle:" << endl;
         cout << "  w -> Warten" << endl;
-        cout << "  f -> Füttern" << endl;
+        cout << "  f -> Fuettern" << endl;
         cout << "  s -> Spielen" << endl;
         cout << "  m -> Medikament geben (nur Tamagotchi)" << endl;
         cout << "  l -> Logbuch anzeigen" << endl;
@@ -68,7 +68,7 @@ void RunMainGame::run() {
                 if (tamagotchi) {
                     tamagotchi->medikamentGeben();
                 } else {
-                    cout << "Ungültiger Befehl für Gudetama" << endl;
+                    cout << "Ungueltiger Befehl für Gudetama" << endl;
                 }
                 pause_and_clear();
                 break;
@@ -94,7 +94,7 @@ void RunMainGame::run() {
                 break;
             default:
                 if (command != 'b') {
-                    cout << "Ungültiger Befehl. Bitte versuche es erneut." << endl;
+                    cout << "Ungueltiger Befehl. Bitte versuche es erneut." << endl;
                     pause_and_clear();
                 }
         }
@@ -102,8 +102,8 @@ void RunMainGame::run() {
     } while (command != 'b');
 
     // Pause only once when exiting the game
-    cout << "\nDas Spiel ist beendet. Vielen Dank fürs Spielen!" << endl;
-    cout << "Drücke Enter, um das Spiel zu beenden..." << endl;
+    cout << "\nDas Spiel ist beendet. Vielen Dank fuers Spielen!" << endl;
+    cout << "Druecke Enter, um das Spiel zu beenden..." << endl;
     cin.ignore();
     cin.get();
 }

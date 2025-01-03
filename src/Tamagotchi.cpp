@@ -22,7 +22,7 @@ void Tamagotchi::warten() {
     }
 
     // Log the action
-    log.add_log("Warten Aktion durchgeführt.");
+    log.add_log("Warten Aktion durchgefuehrt.");
 }
 
 void Tamagotchi::fuettern() {
@@ -30,11 +30,11 @@ void Tamagotchi::fuettern() {
     hunger = 1;
 
     // Log the action
-    log.add_log("Tamagotchi gefüttert.");
+    log.add_log("Tamagotchi gefuettert.");
 }
 
 void Tamagotchi::displayMiniGameMenu() {
-    std::cout << "Choose a game:" << std::endl << "1. Rock, Paper, Scissors" << std::endl << "2. Left or Right: \n";
+    std::cout << "Waehl ein Spiel:" << std::endl << "1. Rock, Paper, Scissors" << std::endl << "2. Links oder Rechts: \n";
     int choice;
     std::cin >> choice;
 
@@ -45,8 +45,8 @@ void Tamagotchi::displayMiniGameMenu() {
         Game2 game2;
         game2.playGame(this->get_name());
     } else {
-        std::cout << "Invalid choice. Exiting mini-game.\n";
-        log.add_log("Invalid game choice, exited mini-game.");
+        std::cout << "Ungueltige Wahl. Mini-Spiel wird beendet.\n";
+        log.add_log("Ungueltige Spielwahl, Mini-Spiel beendet.");
         return;
     }
 }
@@ -70,7 +70,7 @@ void Tamagotchi::medikamentGeben() {
     } else {
         // Decrease health by 2, minimum value 1
         gesundheit = std::max(1, gesundheit - 2);
-        log.add_log("Tamagotchi unnötige Medizin gegeben: Gesundheit reduziert.");
+        log.add_log("Tamagotchi unnoetige Medizin gegeben: Gesundheit reduziert.");
     }
 }
 

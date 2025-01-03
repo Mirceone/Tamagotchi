@@ -15,7 +15,7 @@ inline void clear_screen() {
 }
 
 inline void pause_and_clear() {
-    std::cout << std::endl << "Drücke Enter, um fortzufahren..." << std::endl;
+    std::cout << std::endl << "Druecke Enter, um fortzufahren..." << std::endl;
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::cin.get();  // Wait for Enter key
     clear_screen();  // Clear the screen
