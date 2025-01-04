@@ -24,7 +24,7 @@ When you start the game, you’ll see a **menu-driven interface** in your termin
 
 **Main Menu Options:**  
 
-1. 🐣 **Hatch a New Egg:** Start your journey with a new pet.  
+1. 🐣 **Name your new pet:** Start your journey with a new pet.  
 
 2. 🍔 **Feed Your Pet:** Keep your Tamagotchi healthy and happy.  
 
