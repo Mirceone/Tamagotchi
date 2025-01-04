@@ -10,7 +10,7 @@ protected:
     int alter;
     int langeweile;
     int hunger;
-    std::string type;
+    
 
 public:
     // Constructor for shared attributes

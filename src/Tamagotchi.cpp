@@ -5,7 +5,7 @@
 #include <cstdlib> // For rand()
 #include <iostream>
 
-Tamagotchi::Tamagotchi(const std::string& name) : Tier(name), gesundheit(1), type("Tamagotchi") {}  // Initialize using base and derived attributes
+Tamagotchi::Tamagotchi(const std::string& name) : Tier(name), gesundheit(1) {}  // Initialize using base and derived attributes
 
 void Tamagotchi::warten() {
     // std::cout << "Tamagotchi::warten called." << std::endl; // debugging
