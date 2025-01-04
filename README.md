@@ -24,7 +24,7 @@ When you start the game, you’ll see a **menu-driven interface** in your termin
 
 **Main Menu Options:**  
 
-1. 🐣 **Hatch a New Egg:** Start your journey with a new pet.  
+1. 🐣 **Name your new pet:** Start your journey with a new pet.  
 
 2. 🍔 **Feed Your Pet:** Keep your Tamagotchi healthy and happy.  
 
@@ -87,3 +87,31 @@ When you start the game, you’ll see a **menu-driven interface** in your termin
  
  ---
  
+## 🤝 **Contributions**
+
+The development of the **Tamagotchi CLI Game** was a collaborative effort, with each team member focusing on distinct areas to ensure clarity, efficiency, and scalability.
+
+### **👤 Mircea Pavel**  
+- 🛠️ Developed the **Tier Abstract Class**, establishing a robust base for all creatures.  
+- 🐾 Implemented the **Gudetama** and **Tamagotchi** classes, ensuring unique and interactive creature behaviors.  
+- 🧰 Contributed to the **Utils** module, providing essential utility functions for the game's functionality.  
+
+---
+
+### **👤 Savin Horia Mater**  
+- 🎮 Managed the **Main Program Loop**, ensuring smooth execution and user interaction.  
+- 🔄 Developed the **RunMainGame** class, orchestrating the main game flow and handling core logic.  
+- 📝 Implemented the **Log System**, enabling event tracking and debugging across game activities.  
+
+---
+
+### **👤 Cristiana Rusu**  
+- 🎲 Designed and implemented the interactive **Mini-Games**, including:  
+   - 🕹️ **Links oder Rechts**  
+   - 🪨 **Rock, Paper, Scissors**  
+- 🔗 Ensured seamless integration of games into the main gameplay loop.  
+- 🎯 Focused on enhancing **user experience** within the game mechanics.  
+
+---
+
+> 🧠 *Each team member played a **crucial role** in delivering a **modular**, **extensible**, and **user-friendly** Tamagotchi CLI application.*
