@@ -41,7 +41,7 @@ When you start the game, you’ll see a **menu-driven interface** in your termin
 
 ---
 
-## 🛠️ **Architecture Overview**
+## 🛠️ **Project Structure Overview**
 ```bash
 .
 ├── README.md
